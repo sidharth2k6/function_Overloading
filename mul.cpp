@@ -4,6 +4,13 @@ using namespace std;
 
 class Overloading{
 public:
+    void printline(char ch = '*', int n = 10){
+        int i;
+        for(i = 0; i < n; i++){
+            cout << ch;
+        }
+        cout << endl;
+    }
     void mul(int a, int b){
         cout << "Mul of " << a << " * " << b << " = " << a * b << endl;
     }
@@ -24,6 +31,9 @@ int main(){
     obj.mul(2, 4.8);
     obj.mul(2.4, 4);
     obj.mul(2.4, 4.8);
+    obj.printline();
+    obj.printline('-');
+    obj.printline('+', 5);
     
     return 0;
 }
